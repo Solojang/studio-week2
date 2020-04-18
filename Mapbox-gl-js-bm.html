@@ -10,9 +10,21 @@
     <!-- Add styling info for the map -->
     <style>
          #mapId {
-      height: 400px;
-      width: 800px;
-    }
+            position: absolute;
+            top: 200px;
+            bottom: 100px;
+            left: 5%;
+            width: 90%;
+            z-index: 0;
+        }
+        #text {
+            position: relative;
+            margin-top:30px;
+            left: 5%;
+            width:20%
+            z-index: 1；
+            color: white; 
+        }
     </style>
     <!-- Adding styling info for page layout by reading in a CSS file -->
     <link rel="stylesheet" href="styles.css">
@@ -35,7 +47,7 @@
 
     <script>
     // Set your Mapbox access token
-    mapboxgl.accessToken = "";
+    mapboxgl.accessToken = "pk.eyJ1Ijoic29sb2phbmciLCJhIjoiY2s5NXFldDZoMHAxMDNocWhvbGhvcG5meSJ9.mxCLlh-vL5mdZNif-i--Ig";
 
     /* The map variable stores a new mapbox gl map.
     * map's center set to [-122.467, 37.798] with zoom 13. 
@@ -46,7 +58,7 @@
     var map = new mapboxgl.Map({
     center: [-122.467, 37.798],
     zoom: 13,
-    style: "",
+    style: "mapbox://styles/solojang/ck95qr3r74t971iqpjuxsi6iv",
     container: "mapId"
     });
 
